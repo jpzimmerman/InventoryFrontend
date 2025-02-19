@@ -5,6 +5,18 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(78, 129, 158);
+  background: linear-gradient(
+    to bottom,
+    rgb(78, 129, 158),
+    rgb(90, 148, 182) 50%,
+    rgb(58, 96, 117) 75%,
+    rgba(78, 129, 158, 0.842) 100%
+  );
+  backdrop-filter: blur(50px);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -34,7 +46,7 @@
 }
 
 .card {
-  padding: 2em;
+  padding: 1em;
 }
 
 .read-the-docs {
