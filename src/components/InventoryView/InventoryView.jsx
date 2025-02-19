@@ -1,10 +1,43 @@
 import "../InventoryView/InventoryView.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { getInventoryItems } from "../../services/inventoryDataService";
-// import { MaterialReactTable } from "material-react-table";
+import {
+  MaterialReactTable,
+  useMaterialReactTable,
+} from "material-react-table";
 
 function InventoryView() {
-  const [inventoryData, setData] = useState(null);
+  const [inventoryData, setData] = useState([]);
+  let tableData = null;
+
+  useEffect(() => {
+    getInventory();
+  }, []);
+
+  const columns = useMemo(
+    () => [
+      {
+        accessorKey: "name",
+        header: "Name",
+      },
+      {
+        accessorKey: "description",
+        header: "Description",
+      },
+      {
+        id: "isAlcoholic",
+        header: "Is it Alcoholic?",
+        Cell: ({ value }) => (value ? "Yes" : "No"),
+      },
+      {
+        accessorKey: "quantity",
+        header: "Quantity",
+      },
+    ],
+    []
+  );
+
+  const data = useMemo(() => inventoryData, [inventoryData]);
 
   async function getInventory() {
     try {
@@ -15,15 +48,12 @@ function InventoryView() {
     }
   }
 
-  useEffect(() => {
-    getInventory();
-  }, []);
-
+  tableData = useMaterialReactTable({ columns, data }, []);
   return (
     <>
       <div>
         <p>Inventory</p>
-        <p>{JSON.stringify(inventoryData)}</p>
+        <MaterialReactTable table={tableData} />
       </div>
     </>
   );
