@@ -13,7 +13,7 @@ export const getInventoryItems = async () => {
     },
   };
 
-  await apiService
+  return await apiService
     .get("api/Inventory/GetInventoryItems", config)
     .then((response) => response.data)
     .catch((error) => console.log(error));
