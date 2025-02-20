@@ -26,8 +26,8 @@ function InventoryView() {
       },
       {
         id: "isAlcoholic",
+        accessorFn: (d) => (d.isAlcoholic ? "Yes" : "No"),
         header: "Is it Alcoholic?",
-        Cell: ({ value }) => (value ? "Yes" : "No"),
       },
       {
         accessorKey: "quantity",
