@@ -52,8 +52,9 @@ function InventoryView() {
   return (
     <>
       <div>
-        <p>Inventory</p>
-        <MaterialReactTable table={tableData} />
+        <br></br>
+        <br></br>
+        <MaterialReactTable table={tableData} className="inventory-display" />
       </div>
     </>
   );

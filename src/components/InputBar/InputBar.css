@@ -3,11 +3,11 @@ body {
 }
 
 .input-bar {
-  width: 60vw;
-  height: 3vh;
+  width: 80%;
+  height: 30px !important;
   border-radius: 2%;
   box-shadow: 5px 10px 10px #88888880;
-  margin-right: 10px;
+  margin: 0px 10px 20px;
 }
 
 .submit-button {
@@ -15,9 +15,9 @@ body {
 }
 
 .input-bar:hover {
-  scale: 1.03;
-  transition: all 0.4s;
-  margin-right: 20px;
+  scale: 1.04;
+  transition: all 0.2s;
+  margin-right: 25px;
 }
 
 @keyframes inputbar-focus {
