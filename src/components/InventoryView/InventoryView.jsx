@@ -51,11 +51,11 @@ function InventoryView() {
   tableData = useMaterialReactTable({ columns, data }, []);
   return (
     <>
-      <div>
+      <section>
         <br></br>
         <br></br>
         <MaterialReactTable table={tableData} className="inventory-display" />
-      </div>
+      </section>
     </>
   );
 }
