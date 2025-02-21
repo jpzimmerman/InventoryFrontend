@@ -1,6 +1,12 @@
 # InventoryFrontend
 
-Micro-frontend for inventory system for BarNone platform. Will allow users to inventory items by scanning barcodes into the textbox, and will display inventory of items from BarNone backend in real time.
+Micro-frontend for inventory system for BarNone platform. Allows users to add inventory items by name, and displays inventory of items from BarNone backend in real time.
+
+Future iterations will allow inventory items to be added by barcode, so that inventory can be scanned with a barcode wand upon arrival.
+<br><br>
+
+![image](https://github.com/user-attachments/assets/77b8db80-9edd-4702-b0df-2f613924b773)
+
 
 # React + Vite
 
