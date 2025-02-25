@@ -20,6 +20,11 @@ body {
   margin-right: 25px;
 }
 
+.error-text {
+  color: red;
+  font: 25px Calibri sans-serif;
+}
+
 @keyframes inputbar-focus {
   0% {
     scale: 1;
