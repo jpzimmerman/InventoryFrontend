@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "../InputBar/InputBar.css";
+import "font-awesome/css/font-awesome.min.css";
+import InputErrorBar from "./InputErrorBar";
 import { addInventoryItem } from "../../services/inventoryDataService";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+library.add(faXmark);
 
 function InputBar() {
   const [inputValue, setValue] = useState("");
@@ -20,7 +25,6 @@ function InputBar() {
       setError("");
     }
   };
-
   return (
     <>
       <section>
@@ -39,7 +43,7 @@ function InputBar() {
         </form>
         {error && (
           <p className="error-text">
-            <i className="fa-solid fa-xmark"></i>
+            <InputErrorBar />
             {error}
           </p>
         )}

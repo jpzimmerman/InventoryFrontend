@@ -23,6 +23,7 @@ body {
 .error-text {
   color: red;
   font: 25px Calibri sans-serif;
+  display: block;
 }
 
 @keyframes inputbar-focus {

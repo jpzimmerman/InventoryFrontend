@@ -1,5 +1,5 @@
 import "./App.css";
-import InuputBar from "./components/InputBar/InputBar";
+import InputBar from "./components/InputBar/InputBar";
 import InventoryView from "./components/InventoryView/InventoryView";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="card">
         <h1>Bar Inventory</h1>
-        <InuputBar></InuputBar>
+        <InputBar></InputBar>
         <hr></hr>
         <InventoryView></InventoryView>
       </div>
