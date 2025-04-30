@@ -1,9 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "https://localhost:44375";
-
 const apiService = axios.create({
-  baseURL: BASE_URL,
+  baseURL: import.meta.env.VITE_DATA_SERVICE_BASE_URL,
 });
 const config = {
   headers: {
